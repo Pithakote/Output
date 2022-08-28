@@ -20,9 +20,11 @@ public class CameraController
 
 	public void LateUpdate()
 	{
-		cameraTrans.position.x = character.transform.position.x;
-		cameraTrans.position.y = character.transform.position.y + FOLLOW_DIST_UP;
-		cameraTrans.position.z = character.transform.position.z + FOLLOW_DIST_BACK;
+		//transform.position's individual axis cannot be modified individually, instead we have to change the entire position
+		cameraTrans.position = new Vector3(character.transform.position.x,
+											character.transform.position.y + FOLLOW_DIST_UP,
+											character.transform.position.z + FOLLOW_DIST_BACK);
+
 		cameraTrans.LookAt(character.transform);
 	}
 }
