@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class StarCollectable : Collectable
 {
+	[SerializeField] private Collider starCollider;
 	private CollectableController collectableController;
 
 	private Animator animator;
@@ -11,6 +12,11 @@ public class StarCollectable : Collectable
 	private void Awake()
 	{
 		animator = GetComponent<Animator>();
+
+		if (starCollider == null)
+		{
+			starCollider = GetComponent<BoxCollider>();
+		}
 	}
 
 	public override void OnPickedUp(CollectableController collectableController)
@@ -19,6 +25,7 @@ public class StarCollectable : Collectable
 	 	StarController starController = FindObjectOfType<StarController>();
 
 		starController.PickupStar();
+		starCollider.enabled = false;
 		animator.SetTrigger("pickedUp");
 	}
 
