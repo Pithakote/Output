@@ -4021,6 +4021,7 @@ GameObject:
   - component: {fileID: 44362870}
   - component: {fileID: 44362872}
   - component: {fileID: 44362871}
+  - component: {fileID: 44362873}
   m_Layer: 0
   m_Name: Small Rock(Clone)
   m_TagString: Untagged
@@ -4089,6 +4090,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 44362869}
   m_Mesh: {fileID: 4300000, guid: 8cd80dad203a6e446872b083f46dd3ea, type: 2}
+--- !u!135 &44362873
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44362869}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6099547
+  m_Center: {x: -0.0000009538412, y: 0.60995483, z: -0.04480398}
 --- !u!1 &65454101
 GameObject:
   m_ObjectHideFlags: 0
@@ -11126,6 +11140,7 @@ GameObject:
   - component: {fileID: 127677956}
   - component: {fileID: 127677958}
   - component: {fileID: 127677957}
+  - component: {fileID: 127677959}
   m_Layer: 0
   m_Name: Big Rock(Clone)
   m_TagString: Untagged
@@ -11194,6 +11209,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 127677955}
   m_Mesh: {fileID: 4300000, guid: 81caa7c70e8241e4fad224441b23d4a7, type: 2}
+--- !u!135 &127677959
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127677955}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6099547
+  m_Center: {x: -0.0000009536743, y: 0.6099547, z: -0.044804934}
 --- !u!1 &133266139
 GameObject:
   m_ObjectHideFlags: 0
@@ -20828,6 +20856,7 @@ GameObject:
   - component: {fileID: 314861599}
   - component: {fileID: 314861601}
   - component: {fileID: 314861600}
+  - component: {fileID: 314861602}
   m_Layer: 0
   m_Name: Small Rock(Clone)
   m_TagString: Untagged
@@ -20896,6 +20925,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 314861598}
   m_Mesh: {fileID: 4300000, guid: 8cd80dad203a6e446872b083f46dd3ea, type: 2}
+--- !u!135 &314861602
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314861598}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6099547
+  m_Center: {x: 0.00000047667024, y: 0.60995483, z: -0.04480398}
 --- !u!1 &317253534
 GameObject:
   m_ObjectHideFlags: 0
@@ -28429,6 +28471,7 @@ GameObject:
   - component: {fileID: 465475023}
   - component: {fileID: 465475025}
   - component: {fileID: 465475024}
+  - component: {fileID: 465475026}
   m_Layer: 0
   m_Name: Big Rock(Clone)
   m_TagString: Untagged
@@ -28497,6 +28540,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 465475022}
   m_Mesh: {fileID: 4300000, guid: 81caa7c70e8241e4fad224441b23d4a7, type: 2}
+--- !u!135 &465475026
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465475022}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6099547
+  m_Center: {x: -0.00000047683716, y: 0.6099547, z: -0.04480398}
 --- !u!1 &472905095
 GameObject:
   m_ObjectHideFlags: 0
@@ -28858,6 +28914,7 @@ GameObject:
   - component: {fileID: 492183198}
   - component: {fileID: 492183200}
   - component: {fileID: 492183199}
+  - component: {fileID: 492183201}
   m_Layer: 0
   m_Name: Small Rock(Clone)
   m_TagString: Untagged
@@ -28926,6 +28983,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 492183197}
   m_Mesh: {fileID: 4300000, guid: 8cd80dad203a6e446872b083f46dd3ea, type: 2}
+--- !u!135 &492183201
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492183197}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6099547
+  m_Center: {x: -1.6690782e-10, y: 0.6099548, z: -0.04480398}
 --- !u!1 &493923275
 GameObject:
   m_ObjectHideFlags: 0
@@ -29205,6 +29275,7 @@ GameObject:
   - component: {fileID: 500964842}
   - component: {fileID: 500964844}
   - component: {fileID: 500964843}
+  - component: {fileID: 500964845}
   m_Layer: 0
   m_Name: Small Rock(Clone)
   m_TagString: Untagged
@@ -29273,6 +29344,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 500964841}
   m_Mesh: {fileID: 4300000, guid: 8cd80dad203a6e446872b083f46dd3ea, type: 2}
+--- !u!135 &500964845
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 500964841}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6099547
+  m_Center: {x: -0.0000001193762, y: 0.6099551, z: -0.044805888}
 --- !u!1 &514606607
 GameObject:
   m_ObjectHideFlags: 0
@@ -32357,6 +32441,7 @@ GameObject:
   - component: {fileID: 588406790}
   - component: {fileID: 588406792}
   - component: {fileID: 588406791}
+  - component: {fileID: 588406793}
   m_Layer: 0
   m_Name: Small Rock(Clone)
   m_TagString: Untagged
@@ -32425,6 +32510,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 588406789}
   m_Mesh: {fileID: 4300000, guid: 8cd80dad203a6e446872b083f46dd3ea, type: 2}
+--- !u!135 &588406793
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588406789}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6099547
+  m_Center: {x: -1.6690782e-10, y: 0.6099546, z: -0.04480398}
 --- !u!1 &589048022
 GameObject:
   m_ObjectHideFlags: 0
@@ -33215,6 +33313,7 @@ GameObject:
   - component: {fileID: 643262646}
   - component: {fileID: 643262648}
   - component: {fileID: 643262647}
+  - component: {fileID: 643262649}
   m_Layer: 0
   m_Name: Small Rock(Clone)
   m_TagString: Untagged
@@ -33283,6 +33382,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643262645}
   m_Mesh: {fileID: 4300000, guid: 8cd80dad203a6e446872b083f46dd3ea, type: 2}
+--- !u!135 &643262649
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643262645}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6099547
+  m_Center: {x: -0.000001669097, y: 0.6099551, z: -0.044800166}
 --- !u!1 &647908773
 GameObject:
   m_ObjectHideFlags: 0
@@ -33702,6 +33814,7 @@ GameObject:
   - component: {fileID: 673503467}
   - component: {fileID: 673503469}
   - component: {fileID: 673503468}
+  - component: {fileID: 673503470}
   m_Layer: 0
   m_Name: Big Rock(Clone)
   m_TagString: Untagged
@@ -33770,6 +33883,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 673503466}
   m_Mesh: {fileID: 4300000, guid: 81caa7c70e8241e4fad224441b23d4a7, type: 2}
+--- !u!135 &673503470
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673503466}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6099547
+  m_Center: {x: 0, y: 0.6099547, z: -0.044803977}
 --- !u!1 &679579398
 GameObject:
   m_ObjectHideFlags: 0
@@ -34709,6 +34835,7 @@ GameObject:
   - component: {fileID: 729947333}
   - component: {fileID: 729947335}
   - component: {fileID: 729947334}
+  - component: {fileID: 729947336}
   m_Layer: 0
   m_Name: Small Rock(Clone)
   m_TagString: Untagged
@@ -34777,6 +34904,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 729947332}
   m_Mesh: {fileID: 4300000, guid: 8cd80dad203a6e446872b083f46dd3ea, type: 2}
+--- !u!135 &729947336
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729947332}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6099547
+  m_Center: {x: -0.0000002385855, y: 0.60995483, z: -0.04480398}
 --- !u!1 &734403001
 GameObject:
   m_ObjectHideFlags: 0
@@ -35888,6 +36028,7 @@ GameObject:
   - component: {fileID: 787019718}
   - component: {fileID: 787019720}
   - component: {fileID: 787019719}
+  - component: {fileID: 787019721}
   m_Layer: 0
   m_Name: Small Rock(Clone)
   m_TagString: Untagged
@@ -35956,6 +36097,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 787019717}
   m_Mesh: {fileID: 4300000, guid: 8cd80dad203a6e446872b083f46dd3ea, type: 2}
+--- !u!135 &787019721
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787019717}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6099547
+  m_Center: {x: -0.0000014306784, y: 0.60995483, z: -0.04480398}
 --- !u!1 &790482218
 GameObject:
   m_ObjectHideFlags: 0
@@ -37211,6 +37365,7 @@ GameObject:
   - component: {fileID: 829895399}
   - component: {fileID: 829895401}
   - component: {fileID: 829895400}
+  - component: {fileID: 829895402}
   m_Layer: 0
   m_Name: Small Rock(Clone)
   m_TagString: Untagged
@@ -37279,6 +37434,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 829895398}
   m_Mesh: {fileID: 4300000, guid: 8cd80dad203a6e446872b083f46dd3ea, type: 2}
+--- !u!135 &829895402
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829895398}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6099547
+  m_Center: {x: -1.6690782e-10, y: 0.60995483, z: -0.04481161}
 --- !u!1 &834162051
 GameObject:
   m_ObjectHideFlags: 0
@@ -37964,6 +38132,7 @@ GameObject:
   - component: {fileID: 852676092}
   - component: {fileID: 852676094}
   - component: {fileID: 852676093}
+  - component: {fileID: 852676095}
   m_Layer: 0
   m_Name: Small Rock(Clone)
   m_TagString: Untagged
@@ -38032,6 +38201,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 852676091}
   m_Mesh: {fileID: 4300000, guid: 8cd80dad203a6e446872b083f46dd3ea, type: 2}
+--- !u!135 &852676095
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852676091}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6099547
+  m_Center: {x: -0.00000071542263, y: 0.60995495, z: -0.04480398}
 --- !u!1 &855650594
 GameObject:
   m_ObjectHideFlags: 0
@@ -41337,6 +41519,7 @@ GameObject:
   - component: {fileID: 958317875}
   - component: {fileID: 958317877}
   - component: {fileID: 958317876}
+  - component: {fileID: 958317878}
   m_Layer: 0
   m_Name: Small Rock(Clone)
   m_TagString: Untagged
@@ -41405,6 +41588,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 958317874}
   m_Mesh: {fileID: 4300000, guid: 8cd80dad203a6e446872b083f46dd3ea, type: 2}
+--- !u!135 &958317878
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958317874}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6099547
+  m_Center: {x: -0.0000002385855, y: 0.6099547, z: -0.04480398}
 --- !u!1 &966336003
 GameObject:
   m_ObjectHideFlags: 0
@@ -42156,6 +42352,7 @@ GameObject:
   - component: {fileID: 988829189}
   - component: {fileID: 988829191}
   - component: {fileID: 988829190}
+  - component: {fileID: 988829192}
   m_Layer: 0
   m_Name: Big Rock(Clone)
   m_TagString: Untagged
@@ -42224,6 +42421,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 988829188}
   m_Mesh: {fileID: 4300000, guid: 81caa7c70e8241e4fad224441b23d4a7, type: 2}
+--- !u!135 &988829192
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988829188}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6099547
+  m_Center: {x: 0.00000047683716, y: 0.6099547, z: -0.044804934}
 --- !u!1 &992397147
 GameObject:
   m_ObjectHideFlags: 0
@@ -53356,6 +53566,7 @@ GameObject:
   - component: {fileID: 1289303317}
   - component: {fileID: 1289303319}
   - component: {fileID: 1289303318}
+  - component: {fileID: 1289303320}
   m_Layer: 0
   m_Name: Small Rock(Clone)
   m_TagString: Untagged
@@ -53424,6 +53635,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1289303316}
   m_Mesh: {fileID: 4300000, guid: 8cd80dad203a6e446872b083f46dd3ea, type: 2}
+--- !u!135 &1289303320
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289303316}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6099547
+  m_Center: {x: -0.00000071542263, y: 0.6099547, z: -0.04480398}
 --- !u!1 &1297373932
 GameObject:
   m_ObjectHideFlags: 0
@@ -54479,6 +54703,7 @@ GameObject:
   - component: {fileID: 1326518314}
   - component: {fileID: 1326518316}
   - component: {fileID: 1326518315}
+  - component: {fileID: 1326518317}
   m_Layer: 0
   m_Name: Small Rock(Clone)
   m_TagString: Untagged
@@ -54547,6 +54772,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1326518313}
   m_Mesh: {fileID: 4300000, guid: 8cd80dad203a6e446872b083f46dd3ea, type: 2}
+--- !u!135 &1326518317
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326518313}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6099547
+  m_Center: {x: -0.00000047700405, y: 0.6099551, z: -0.04481161}
 --- !u!43 &1330768267
 Mesh:
   m_ObjectHideFlags: 0
@@ -58456,6 +58694,7 @@ GameObject:
   - component: {fileID: 1440181628}
   - component: {fileID: 1440181630}
   - component: {fileID: 1440181629}
+  - component: {fileID: 1440181631}
   m_Layer: 0
   m_Name: Small Rock(Clone)
   m_TagString: Untagged
@@ -58524,6 +58763,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1440181627}
   m_Mesh: {fileID: 4300000, guid: 8cd80dad203a6e446872b083f46dd3ea, type: 2}
+--- !u!135 &1440181631
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440181627}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6099547
+  m_Center: {x: -0.0000009538412, y: 0.60995483, z: -0.04480398}
 --- !u!1 &1441558787
 GameObject:
   m_ObjectHideFlags: 0
@@ -62311,6 +62563,7 @@ GameObject:
   - component: {fileID: 1554201291}
   - component: {fileID: 1554201293}
   - component: {fileID: 1554201292}
+  - component: {fileID: 1554201294}
   m_Layer: 0
   m_Name: Small Rock(Clone)
   m_TagString: Untagged
@@ -62379,6 +62632,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1554201290}
   m_Mesh: {fileID: 4300000, guid: 8cd80dad203a6e446872b083f46dd3ea, type: 2}
+--- !u!135 &1554201294
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554201290}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6099547
+  m_Center: {x: 0.00000005943774, y: 0.6099551, z: -0.04480398}
 --- !u!1 &1554641507
 GameObject:
   m_ObjectHideFlags: 0
@@ -62816,6 +63082,7 @@ GameObject:
   - component: {fileID: 1569662928}
   - component: {fileID: 1569662930}
   - component: {fileID: 1569662929}
+  - component: {fileID: 1569662931}
   m_Layer: 0
   m_Name: Small Rock(Clone)
   m_TagString: Untagged
@@ -62884,6 +63151,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1569662927}
   m_Mesh: {fileID: 4300000, guid: 8cd80dad203a6e446872b083f46dd3ea, type: 2}
+--- !u!135 &1569662931
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569662927}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6099547
+  m_Center: {x: -0.0000009538412, y: 0.6099546, z: -0.04480398}
 --- !u!1 &1572076227
 GameObject:
   m_ObjectHideFlags: 0
@@ -64811,6 +65091,7 @@ GameObject:
   - component: {fileID: 1637567128}
   - component: {fileID: 1637567130}
   - component: {fileID: 1637567129}
+  - component: {fileID: 1637567131}
   m_Layer: 0
   m_Name: Small Rock(Clone)
   m_TagString: Untagged
@@ -64879,6 +65160,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1637567127}
   m_Mesh: {fileID: 4300000, guid: 8cd80dad203a6e446872b083f46dd3ea, type: 2}
+--- !u!135 &1637567131
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637567127}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6099547
+  m_Center: {x: 0.0000009535074, y: 0.60995483, z: -0.04480398}
 --- !u!1 &1637687952
 GameObject:
   m_ObjectHideFlags: 0
@@ -66141,6 +66435,7 @@ GameObject:
   - component: {fileID: 1658465590}
   - component: {fileID: 1658465592}
   - component: {fileID: 1658465591}
+  - component: {fileID: 1658465593}
   m_Layer: 0
   m_Name: Big Rock(Clone)
   m_TagString: Untagged
@@ -66209,6 +66504,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1658465589}
   m_Mesh: {fileID: 4300000, guid: 81caa7c70e8241e4fad224441b23d4a7, type: 2}
+--- !u!135 &1658465593
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658465589}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6099547
+  m_Center: {x: 0, y: 0.6099547, z: -0.044804934}
 --- !u!1 &1661791451
 GameObject:
   m_ObjectHideFlags: 0
@@ -71046,6 +71354,7 @@ GameObject:
   - component: {fileID: 1683481393}
   - component: {fileID: 1683481395}
   - component: {fileID: 1683481394}
+  - component: {fileID: 1683481396}
   m_Layer: 0
   m_Name: Small Rock(Clone)
   m_TagString: Untagged
@@ -71114,6 +71423,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1683481392}
   m_Mesh: {fileID: 4300000, guid: 8cd80dad203a6e446872b083f46dd3ea, type: 2}
+--- !u!135 &1683481396
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683481392}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6099547
+  m_Center: {x: -0.0000019075155, y: 0.6099547, z: -0.04481161}
 --- !u!1 &1686311384
 GameObject:
   m_ObjectHideFlags: 0
@@ -73655,6 +73977,7 @@ GameObject:
   - component: {fileID: 1748875741}
   - component: {fileID: 1748875743}
   - component: {fileID: 1748875742}
+  - component: {fileID: 1748875744}
   m_Layer: 0
   m_Name: Small Rock(Clone)
   m_TagString: Untagged
@@ -73723,6 +74046,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1748875740}
   m_Mesh: {fileID: 4300000, guid: 8cd80dad203a6e446872b083f46dd3ea, type: 2}
+--- !u!135 &1748875744
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748875740}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6099547
+  m_Center: {x: -0.00000047700405, y: 0.60995483, z: -0.044804934}
 --- !u!1 &1749111193
 GameObject:
   m_ObjectHideFlags: 0
@@ -75352,6 +75688,7 @@ GameObject:
   - component: {fileID: 1778496066}
   - component: {fileID: 1778496068}
   - component: {fileID: 1778496067}
+  - component: {fileID: 1778496069}
   m_Layer: 0
   m_Name: Small Rock(Clone)
   m_TagString: Untagged
@@ -75420,6 +75757,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1778496065}
   m_Mesh: {fileID: 4300000, guid: 8cd80dad203a6e446872b083f46dd3ea, type: 2}
+--- !u!135 &1778496069
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778496065}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6099547
+  m_Center: {x: -0.0000019075155, y: 0.6099551, z: -0.04480398}
 --- !u!1 &1780083698
 GameObject:
   m_ObjectHideFlags: 0
@@ -76507,6 +76857,7 @@ GameObject:
   - component: {fileID: 1834425096}
   - component: {fileID: 1834425098}
   - component: {fileID: 1834425097}
+  - component: {fileID: 1834425099}
   m_Layer: 0
   m_Name: Small Rock(Clone)
   m_TagString: Untagged
@@ -76575,6 +76926,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1834425095}
   m_Mesh: {fileID: 4300000, guid: 8cd80dad203a6e446872b083f46dd3ea, type: 2}
+--- !u!135 &1834425099
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834425095}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6099547
+  m_Center: {x: -0.0000009538412, y: 0.60995483, z: -0.04481161}
 --- !u!1 &1835096065
 GameObject:
   m_ObjectHideFlags: 0
@@ -76888,6 +77252,7 @@ GameObject:
   - component: {fileID: 1860374683}
   - component: {fileID: 1860374685}
   - component: {fileID: 1860374684}
+  - component: {fileID: 1860374686}
   m_Layer: 0
   m_Name: Big Rock(Clone)
   m_TagString: Untagged
@@ -76956,6 +77321,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1860374682}
   m_Mesh: {fileID: 4300000, guid: 81caa7c70e8241e4fad224441b23d4a7, type: 2}
+--- !u!135 &1860374686
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860374682}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6099547
+  m_Center: {x: 0, y: 0.6099547, z: -0.044803977}
 --- !u!1 &1866215941
 GameObject:
   m_ObjectHideFlags: 0
@@ -82421,6 +82799,7 @@ GameObject:
   - component: {fileID: 2001609340}
   - component: {fileID: 2001609342}
   - component: {fileID: 2001609341}
+  - component: {fileID: 2001609343}
   m_Layer: 0
   m_Name: Small Rock(Clone)
   m_TagString: Untagged
@@ -82489,6 +82868,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2001609339}
   m_Mesh: {fileID: 4300000, guid: 8cd80dad203a6e446872b083f46dd3ea, type: 2}
+--- !u!135 &2001609343
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001609339}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6099547
+  m_Center: {x: -1.6690782e-10, y: 0.60995483, z: -0.04480398}
 --- !u!1 &2009848800
 GameObject:
   m_ObjectHideFlags: 0
@@ -84473,6 +84865,7 @@ GameObject:
   - component: {fileID: 2079648484}
   - component: {fileID: 2079648486}
   - component: {fileID: 2079648485}
+  - component: {fileID: 2079648487}
   m_Layer: 0
   m_Name: Small Rock(Clone)
   m_TagString: Untagged
@@ -84541,6 +84934,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2079648483}
   m_Mesh: {fileID: 4300000, guid: 8cd80dad203a6e446872b083f46dd3ea, type: 2}
+--- !u!135 &2079648487
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079648483}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6099547
+  m_Center: {x: 0.0000019071817, y: 0.6099551, z: -0.04481161}
 --- !u!1 &2079932842
 GameObject:
   m_ObjectHideFlags: 0
