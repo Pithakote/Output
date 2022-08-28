@@ -9,8 +9,8 @@ public class CharacterController : MonoBehaviour
 	private NavMeshAgent navAgent;
 	private int maxHealth = 50;
 	private int health;
-
-    void Start()
+	Vector3 movement = Vector3.zero;
+	void Start()
     {
 		characterMovement = GetComponent<CharacterMovement>();
 		navAgent = GetComponent<NavMeshAgent>();
@@ -19,24 +19,38 @@ public class CharacterController : MonoBehaviour
 
     void Update()
     {
-		Vector3 movement = Vector3.zero;
-        if(Input.GetKey(KeyCode.W))
+
+		if (Input.GetKey(KeyCode.W))
 		{
 			movement.z = 1f;
 		}
-		else if(Input.GetKey(KeyCode.S))
+		else if (Input.GetKey(KeyCode.S))
 		{
 			movement.z = -1f;
 		}
-		if(Input.GetKey(KeyCode.A))
+		else
+		{
+			movement.z = 0.0f;
+		}
+
+		if (Input.GetKey(KeyCode.A))
 		{
 			movement.x = -1f;
 		}
-		else if(Input.GetKey(KeyCode.D))
+		else if (Input.GetKey(KeyCode.D))
 		{
 			movement.x = 1f;
 		}
+		else
+		{
+			movement.x = 0.0f;			
+		}
 
+		
+	}
+
+	private void FixedUpdate()
+	{
 		characterMovement.Move(movement);
 	}
 
