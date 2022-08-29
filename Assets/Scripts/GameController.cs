@@ -15,7 +15,7 @@ public class GameController : MonoBehaviour
 	{		
 
 		cameraController = new CameraController(transform.Find("Camera").GetComponent<Camera>(), characterController);
-		collectableController = new CollectableController(transform.Find("Collectables"), characterController);
+		collectableController = new CollectableController(transform.Find("Collectables"));
 		StarController starController = GetComponent<StarController>();
 		UIController = new UIController(transform.Find("UI"), characterController, starController);
 	}
