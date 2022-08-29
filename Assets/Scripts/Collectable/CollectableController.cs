@@ -9,7 +9,7 @@ public class CollectableController : ICollectableControl
 {
 	public event Action <GameObject> onPickedUpEvent;
 
-	public CollectableController(Transform collectableContainer, CharacterController character)
+	public CollectableController(Transform collectableContainer)
 	{
 		Collectable[] collectables = collectableContainer.GetComponentsInChildren<Collectable>();
 		foreach(Collectable collectable in collectables)
