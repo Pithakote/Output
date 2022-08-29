@@ -6,7 +6,7 @@ public class GameController : MonoBehaviour
 {
 	[Header("UI Controller Referenced")]
 	[SerializeField] private Transform UIControllerObject;
-	[SerializeField] private GameObject InventoryObject;
+	[SerializeField] private Inventory InventoryObject;
 
 	public CharacterController characterController;
 	public bool hardMode;
