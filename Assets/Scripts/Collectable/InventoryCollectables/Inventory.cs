@@ -14,20 +14,21 @@ class InventoryStoredItem
         NumberOfItems++;
     }
 }
-public class Inventory : MonoBehaviour
+public class Inventory 
 {
     [SerializeField] GameObject emptyInventoryItem = default;
     int numberOfItems;
     Dictionary<string, InventoryStoredItem> inventoryItems = default;
     InventoryStoredItem inventoryStoredItem;
     public event Action<GameObject> onPickedUpEvent;
-   
+    
     //public Dictionary<string, InventoryStoredItem> InventoryItems { get { return inventoryItems; } }
 
-    private void Awake()
-    {
-        inventoryItems = new Dictionary<string, InventoryStoredItem>();
-    }
+        public Inventory()
+        {
+
+            inventoryItems = new Dictionary<string, InventoryStoredItem>();
+        }
  
 
     public void AddToDictionary(InventoryCollectable inventoryItem)
@@ -53,4 +54,6 @@ public class Inventory : MonoBehaviour
         
         return 0;
     }
+
+    
 }

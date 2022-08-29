@@ -6,11 +6,12 @@ public class GameController : MonoBehaviour
 {
 	[Header("UI Controller Referenced")]
 	[SerializeField] private Transform UIControllerObject;
-	[SerializeField] private Inventory InventoryObject;
+	 
 
 	public CharacterController characterController;
 	public bool hardMode;
 
+	private Inventory InventoryObject;
 	private CameraController cameraController;
 	private CollectableController collectableController;
 	private UIController UIController;
@@ -23,11 +24,12 @@ public class GameController : MonoBehaviour
 			UIControllerObject = transform.Find("UI");
 		}
 
+		InventoryObject = new Inventory();
 		cameraController = new CameraController(transform.Find("Camera").GetComponent<Camera>(), characterController);
 		collectableController = new CollectableController(transform.Find("Collectables"), InventoryObject);
 		StarController starController = GetComponent<StarController>();
 		UIController = new UIController(UIControllerObject, characterController, starController);
-		InventoryController = new InventoryController(InventoryObject);
+		InventoryController = GetComponent<InventoryController>();
 	}
 
 	void Start()
