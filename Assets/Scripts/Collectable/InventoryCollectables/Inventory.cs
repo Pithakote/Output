@@ -47,10 +47,12 @@ public class InventoryStoredItem
 {
     public InventoryCollectable InventoryItem;
     public int NumberOfItems;
-    
-    public InventoryStoredItem(InventoryCollectable inventoryItem)
+    public UIInventoryItemCell itemCell;
+
+    public InventoryStoredItem(InventoryCollectable inventoryItem, UIInventoryItemCell itemCell)
     {
         InventoryItem = inventoryItem;
+        this.itemCell = itemCell;
         NumberOfItems++;
     }
 }
@@ -83,27 +85,30 @@ public class Inventory
     public void AddToDictionary(InventoryCollectable inventoryItem)
     {
         //inventoryStoredItem = new InventoryStoredItem(inventoryItem)
-     if (inventoryItems.ContainsKey(inventoryItem.NameOfItem))
+        if (inventoryItems.ContainsKey(inventoryItem.NameOfItem))
         {
             inventoryItems[inventoryItem.NameOfItem].NumberOfItems++;
 
-
+            inventoryItems[inventoryItem.NameOfItem].itemCell.InventoryItemCounter.text = inventoryItems[inventoryItem.NameOfItem].NumberOfItems.ToString();
         }
         else
         {
-            inventoryItems.Add(inventoryItem.NameOfItem, new InventoryStoredItem(inventoryItem));
-
             uiIntentoryCell.InventoryItemImage.sprite = inventoryItem.ImageOfItem;
             uiIntentoryCell.InventoryItemName.text = inventoryItem.NameOfItem;
+            
+            // this.monoBehaviour.StartCoroutine(WaitForInstantiation(inventoryItem));
+            GameObject inventoryCell = GameObject.Instantiate(uiIntentoryCell.gameObject, Vector3.zero, Quaternion.identity, inventoryDisplayContent);
+
+            //  yield return new WaitUntil(() => inventoryCell.activeInHierarchy);
+            inventoryItems.Add(inventoryItem.NameOfItem, new InventoryStoredItem(inventoryItem, inventoryCell.GetComponent<UIInventoryItemCell>()));
+
             uiIntentoryCell.InventoryItemCounter.text = inventoryItems[inventoryItem.NameOfItem].NumberOfItems.ToString();
 
+            inventoryCell.GetComponent<UIInventoryItemCell>().InventoryItemButton.Setup(inventoryDisplayPanel, inventoryItems[inventoryItem.NameOfItem]);
 
+            
 
-
-            this.monoBehaviour.StartCoroutine(WaitForInstantiation(inventoryItem));
-
-
-
+            
         }
     }
 
@@ -114,6 +119,8 @@ public class Inventory
         yield return new WaitUntil(() => inventoryCell.activeInHierarchy);
 
         inventoryCell.GetComponent<UIInventoryItemCell>().InventoryItemButton.Setup(inventoryDisplayPanel, inventoryItems[inventoryItem.NameOfItem]);
+
+        inventoryItems.Add(inventoryItem.NameOfItem, new InventoryStoredItem(inventoryItem, inventoryCell.GetComponent<UIInventoryItemCell>()));
 
     }
 
