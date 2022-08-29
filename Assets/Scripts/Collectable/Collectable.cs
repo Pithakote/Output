@@ -16,13 +16,13 @@ public abstract class Collectable : MonoBehaviour
 			return;			
 		}
 
-		this.collectableController.onPickedUpEvent += DestroyObject;
+		this.collectableController.onPickedUpEvent += PickedUpEvent;
 	}
 
 	public void Setup(ICollectableControl collectableController)
 	{
 		this.collectableController = collectableController;
-		this.collectableController.onPickedUpEvent += DestroyObject;
+		this.collectableController.onPickedUpEvent += PickedUpEvent;
 	}
 
 	public abstract void OnPickedUp();
@@ -31,7 +31,7 @@ public abstract class Collectable : MonoBehaviour
 		OnPickedUp();
 	}
 
-	private void DestroyObject(GameObject gameObject)
+	protected virtual void PickedUpEvent(GameObject gameObject)
 	{
 		if (gameObject != this.gameObject)
 		{
@@ -45,14 +45,14 @@ public abstract class Collectable : MonoBehaviour
 	{
 		//needs to un-subscribe when disabled because it will still try to refer to the
 		//disabled object if it is not un-subscribed
-		this.collectableController.onPickedUpEvent -= DestroyObject;
+		this.collectableController.onPickedUpEvent -= PickedUpEvent;
 	}
 
 	private void OnDestroy()
 	{
 		//needs to un-subscribe when disabled because it will still try to refer to the
 		//destroyed object if it is not un-subscribed
-		this.collectableController.onPickedUpEvent -= DestroyObject;
+		this.collectableController.onPickedUpEvent -= PickedUpEvent;
 	}
 
 }
