@@ -8,4 +8,5 @@ public interface ICollectableControl
     //delegate void PickedUpEvent(GameObject gameObject);
     event Action <GameObject> onPickedUpEvent;
     void OnPickedUp(GameObject gameObject);
+    Inventory Inventory { get; }
 }

@@ -24,10 +24,10 @@ public class GameController : MonoBehaviour
 		}
 
 		cameraController = new CameraController(transform.Find("Camera").GetComponent<Camera>(), characterController);
-		collectableController = new CollectableController(transform.Find("Collectables"));
+		collectableController = new CollectableController(transform.Find("Collectables"), InventoryObject);
 		StarController starController = GetComponent<StarController>();
 		UIController = new UIController(UIControllerObject, characterController, starController);
-		InventoryController = new InventoryController();
+		InventoryController = new InventoryController(InventoryObject);
 	}
 
 	void Start()

@@ -7,10 +7,14 @@ using UnityEngine;
 
 public class CollectableController : ICollectableControl
 {
+	private Inventory inventory;
+	public Inventory Inventory { get { return inventory; } }
+
 	public event Action <GameObject> onPickedUpEvent;
 
-	public CollectableController(Transform collectableContainer)
+	public CollectableController(Transform collectableContainer, Inventory inventory)
 	{
+		this.inventory = inventory;
 		Collectable[] collectables = collectableContainer.GetComponentsInChildren<Collectable>();
 		foreach(Collectable collectable in collectables)
 		{
