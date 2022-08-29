@@ -7,7 +7,13 @@ public class UIInventoryItemButton : UIButton
     [SerializeField]
     InventoryDisplayPanel displayPanel = default;
     [SerializeField] InventoryStoredItem inventoryStoredItem = default;
-   
+
+    protected override void Awake()
+    {
+        base.Awake();
+        
+    }
+
     public void Setup(InventoryDisplayPanel displayPanel, InventoryStoredItem inventoryStoredItem)
     {
         this.displayPanel = displayPanel;
@@ -17,6 +23,12 @@ public class UIInventoryItemButton : UIButton
     protected override void onButtonClick()
     {
         //displayPanel.SetDisplayProperties();
+        SetupImages();
+    }
+
+    public void SetupImages()
+    {
+
         Debug.Log("The current gameobject is: " + this.gameObject.name);
         this.displayPanel.SetDisplayProperties(this.inventoryStoredItem.InventoryItem.ImageOfItem,
                                             this.inventoryStoredItem.InventoryItem.NameOfItem,

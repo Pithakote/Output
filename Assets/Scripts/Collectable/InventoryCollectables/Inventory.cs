@@ -105,6 +105,7 @@ public class Inventory
             uiIntentoryCell.InventoryItemCounter.text = inventoryItems[inventoryItem.NameOfItem].NumberOfItems.ToString();
 
             inventoryCell.GetComponent<UIInventoryItemCell>().InventoryItemButton.Setup(inventoryDisplayPanel, inventoryItems[inventoryItem.NameOfItem]);
+            inventoryCell.GetComponent<UIInventoryItemCell>().InventoryItemButton.SetupImages();
 
             
 
