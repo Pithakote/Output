@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class InventoryController 
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public InventoryController()
+    { 
+    
     }
 }

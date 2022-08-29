@@ -4,20 +4,30 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+	[Header("UI Controller Referenced")]
+	[SerializeField] private Transform UIControllerObject;
+	[SerializeField] private GameObject InventoryObject;
+
 	public CharacterController characterController;
 	public bool hardMode;
 
 	private CameraController cameraController;
 	private CollectableController collectableController;
 	private UIController UIController;
+	private InventoryController InventoryController;
 
 	private void Awake()
-	{		
+	{
+		if (UIControllerObject == null)
+		{
+			UIControllerObject = transform.Find("UI");
+		}
 
 		cameraController = new CameraController(transform.Find("Camera").GetComponent<Camera>(), characterController);
 		collectableController = new CollectableController(transform.Find("Collectables"));
 		StarController starController = GetComponent<StarController>();
-		UIController = new UIController(transform.Find("UI"), characterController, starController);
+		UIController = new UIController(UIControllerObject, characterController, starController);
+		InventoryController = new InventoryController();
 	}
 
 	void Start()
