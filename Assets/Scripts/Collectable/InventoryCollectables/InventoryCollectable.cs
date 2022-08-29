@@ -27,11 +27,11 @@ public class InventoryCollectable : Collectable
             return;
         }
 
-        NameOfItem = itemDescription.Name;
-        DescriptionOfItem = itemDescription.Description;
-        ImageOfItem = itemDescription.Image;
-        MeshOfItem = itemDescription.ModelMesh;
-        MaterialOfItem = itemDescription.MeshMaterial;
+        this.NameOfItem = itemDescription.Name;
+        this.DescriptionOfItem = itemDescription.Description;
+        this.ImageOfItem = itemDescription.Image;
+        this.MeshOfItem = itemDescription.ModelMesh;
+        this.MaterialOfItem = itemDescription.MeshMaterial;
 
         if (meshFilterComponent == null)
         {
