@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class GameController : MonoBehaviour
 {
@@ -10,9 +12,25 @@ public class GameController : MonoBehaviour
 	[SerializeField] private Transform UIControllerObject;
 	[SerializeField] GameObject InventoryUI;
 
+	[Header("Original variables that came with the project")]
 	public CharacterController characterController;
 	public bool hardMode;
 
+	[Header("Inventory object references")]
+
+	[Space(0)]
+	[Header("Inventory Display Panel")]
+	[SerializeField] Image inventoryDisplayImage;
+	[SerializeField] TMP_Text inventoryItemNameText;
+	[SerializeField] TMP_Text inventoryItemDescriptionText;
+
+	[Space(1)]
+	[Header("Inventory Item Cells")]	
+	[SerializeField] GameObject InventoryItemCell;
+	[SerializeField] private UIInventoryItemCell inventoryItemsCell;
+	[SerializeField] Transform inventoryDisplayContent;
+	
+	private InventoryDisplayPanel inventoryDisplayPanel;
 	private Inventory InventoryObject;
 	private CameraController cameraController;
 	private CollectableController collectableController;
@@ -36,13 +54,19 @@ public class GameController : MonoBehaviour
 			UIControllerObject = transform.Find("UI");
 		}
 
-		InventoryObject = new Inventory();
+		inventoryItemsCell = InventoryItemCell.GetComponent<UIInventoryItemCell>();
+		inventoryDisplayPanel = new InventoryDisplayPanel(inventoryDisplayImage, inventoryItemNameText, inventoryItemDescriptionText);
+		InventoryObject = new Inventory(inventoryDisplayPanel, inventoryItemsCell, inventoryDisplayContent);
+
+		InventoryController = new InventoryController(InventoryUI, InventoryObject);
+		
+
 		cameraController = new CameraController(transform.Find("Camera").GetComponent<Camera>(), characterController);
 		collectableController = new CollectableController(transform.Find("Collectables"), InventoryObject);
 		StarController starController = GetComponent<StarController>();
-		InventoryController = new InventoryController(InventoryUI, InventoryObject);
 		UIController = new UIController(UIControllerObject, characterController, starController);
-		
+
+
 	}
 
 	void Start()

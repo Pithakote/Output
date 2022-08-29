@@ -18,6 +18,8 @@ public class InventoryController
 
     GameObject inventoryUI;
     
+    public Inventory Inventory { get { return inventory; } }
+
     public InventoryController(GameObject inventoryUI, Inventory inventory)
     {
         this.inventory = inventory;
