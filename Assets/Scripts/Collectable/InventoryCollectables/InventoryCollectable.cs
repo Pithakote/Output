@@ -30,7 +30,8 @@ public class InventoryCollectable : Collectable
         }
 
         collectableController.Inventory.AddToDictionary(this);
-        gameObject.SetActive(false);
+        
+        Destroy(this.gameObject);
 
     }
     void SetupObject(CollectableInventoryItemsSO itemDescription)
