@@ -1,38 +1,56 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+class InventoryStoredItem
+{
+    public InventoryCollectable InventoryItem;
+    public int NumberOfItems;
+    
+    public InventoryStoredItem(InventoryCollectable inventoryItem)
+    {
+        InventoryItem = inventoryItem;
+        NumberOfItems++;
+    }
+}
 public class Inventory : MonoBehaviour
 {
-    public Inventory Instance { get; private set; }
-
-    Dictionary<string, InventoryCollectable> inventoryItems = default;
-    
-    public Dictionary<string, InventoryCollectable> InventoryItems { get { return inventoryItems; } }
+    [SerializeField] GameObject emptyInventoryItem = default;
+    int numberOfItems;
+    Dictionary<string, InventoryStoredItem> inventoryItems = default;
+    InventoryStoredItem inventoryStoredItem;
+    public event Action<GameObject> onPickedUpEvent;
+   
+    //public Dictionary<string, InventoryStoredItem> InventoryItems { get { return inventoryItems; } }
 
     private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(this.gameObject);
-        }
-        else if (Instance != null && GameObject.Find(this.gameObject.name) != null)
-        {
-            Destroy(this.gameObject);
-        }
-
-        inventoryItems = new Dictionary<string, InventoryCollectable>();
+        inventoryItems = new Dictionary<string, InventoryStoredItem>();
     }
-    // Start is called before the first frame update
-    void Start()
+ 
+
+    public void AddToDictionary(InventoryCollectable inventoryItem)
     {
-        
+        //inventoryStoredItem = new InventoryStoredItem(inventoryItem);
+
+       if (inventoryItems.ContainsKey(inventoryItem.NameOfItem))
+        {
+            inventoryItems[inventoryItem.NameOfItem].NumberOfItems++;
+        }
+        else
+        {
+            inventoryItems.Add(inventoryItem.NameOfItem, new InventoryStoredItem(inventoryItem));
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public int GetNumberOfItems()
     {
+        int numofItems = default;
+        List<InventoryCollectable> hams = new List<InventoryCollectable>();
+        InventoryCollectable ham = default;
+
         
+        return 0;
     }
 }

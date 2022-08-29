@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class InventoryCollectable : Collectable
 {
+    [SerializeField] Collider collider;
     [SerializeField] MeshFilter meshFilterComponent = default;
     [SerializeField] MeshRenderer meshRendererComponent = default;
     [SerializeField] CollectableInventoryItemsSO itemDescription = default;
-
+    
     public string NameOfItem { get; private set; }
     public string DescriptionOfItem { get; private set; }
     public Sprite ImageOfItem { get; private set; }
@@ -18,6 +19,19 @@ public class InventoryCollectable : Collectable
     public override void OnPickedUp()
     {
         //add to inventory
+        collider.enabled = false;
+        collectableController.OnPickedUp(this.gameObject);
+    }
+    protected override void PickedUpEvent(GameObject gameObject)
+    {
+        if (gameObject != this.gameObject)
+        {
+            return;
+        }
+
+        collectableController.Inventory.AddToDictionary(this);
+        gameObject.SetActive(false);
+
     }
     void SetupObject(CollectableInventoryItemsSO itemDescription)
     {
@@ -52,6 +66,12 @@ public class InventoryCollectable : Collectable
         {
             meshRendererComponent.material = MaterialOfItem;
         }
+
+        if (collider == null)
+        {
+            collider = GetComponent<Collider>();
+        }
+        
     }
     private void Awake()
     {
