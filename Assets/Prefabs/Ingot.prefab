@@ -88,6 +88,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1151649066994151428}
+  - component: {fileID: 1243919970284393612}
   m_Layer: 0
   m_Name: Ingot
   m_TagString: Untagged
@@ -110,6 +111,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1243919970284393612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2928607763849265115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd1e4b66316e34e49aad79f500a93e2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemDescription: {fileID: 11400000, guid: 54cc101e0df81dc46990076d0906e51f, type: 2}
+  meshFilterComponent: {fileID: 5076964434819378851}
+  meshRendererComponent: {fileID: 2294742404712741995}
 --- !u!1 &6594834929349675141
 GameObject:
   m_ObjectHideFlags: 0
