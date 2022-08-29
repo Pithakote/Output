@@ -29,6 +29,11 @@ public class InventoryCollectable : Collectable
             return;
         }
 
+        if (!collectableController.Inventory.CanBeAdded())
+        {
+            return;
+        }
+
         collectableController.Inventory.AddToDictionary(this);
         
         Destroy(this.gameObject);

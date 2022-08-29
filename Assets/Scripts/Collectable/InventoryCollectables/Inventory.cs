@@ -58,7 +58,7 @@ public class InventoryStoredItem
 }
 public class Inventory 
 {    
-    int numberOfItems;
+    int numberOfItems, maxNumberOfItems = 100;
     Dictionary<string, InventoryStoredItem> inventoryItems = default;
     InventoryStoredItem inventoryStoredItem;
     InventoryDisplayPanel inventoryDisplayPanel;
@@ -80,7 +80,18 @@ public class Inventory
         this.inventoryDisplayContent = inventoryDisplayContent;
         this.monoBehaviour = monoBehaviour;
     }
- 
+
+    public bool CanBeAdded()
+    {
+        if (numberOfItems >= maxNumberOfItems)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
 
     public void AddToDictionary(InventoryCollectable inventoryItem)
     {
