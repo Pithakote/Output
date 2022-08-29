@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+	public static GameController Instance { get; private set; }
+
 	[Header("UI Controller Referenced")]
 	[SerializeField] private Transform UIControllerObject;
 	[SerializeField] GameObject InventoryUI;
@@ -15,10 +17,20 @@ public class GameController : MonoBehaviour
 	private CameraController cameraController;
 	private CollectableController collectableController;
 	private UIController UIController;
-	private InventoryController InventoryController;
+	public InventoryController InventoryController { get; private set; }
 
 	private void Awake()
 	{
+		if (Instance == null)
+		{
+			Instance = this;
+			DontDestroyOnLoad(this.gameObject);
+		}
+		else if (Instance != null && FindObjectOfType<GameController>() != null)
+		{
+			Destroy(this.gameObject);
+		}
+
 		if (UIControllerObject == null)
 		{
 			UIControllerObject = transform.Find("UI");
