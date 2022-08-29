@@ -9,6 +9,16 @@ public abstract class Collectable : MonoBehaviour
 {
 	protected ICollectableControl collectableController;
 
+	private void OnEnable()
+	{
+		if (this.collectableController == null)
+		{
+			return;			
+		}
+
+		this.collectableController.onPickedUpEvent += DestroyObject;
+	}
+
 	public void Setup(ICollectableControl collectableController)
 	{
 		this.collectableController = collectableController;
@@ -33,11 +43,15 @@ public abstract class Collectable : MonoBehaviour
 
 	private void OnDisable()
 	{
+		//needs to un-subscribe when disabled because it will still try to refer to the
+		//disabled object if it is not un-subscribed
 		this.collectableController.onPickedUpEvent -= DestroyObject;
 	}
 
 	private void OnDestroy()
 	{
+		//needs to un-subscribe when disabled because it will still try to refer to the
+		//destroyed object if it is not un-subscribed
 		this.collectableController.onPickedUpEvent -= DestroyObject;
 	}
 
