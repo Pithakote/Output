@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class HealthCollectable : Collectable
 {
-	public override void OnPickedUp(CollectableController collectableController)
+	public override void OnPickedUp()
 	{
 		CharacterController character = FindObjectOfType<CharacterController>();
 		character.BoostHealth();
-		collectableController.OnPickedUp(this);
+		collectableController.OnPickedUp(this.gameObject);
 	}
 }

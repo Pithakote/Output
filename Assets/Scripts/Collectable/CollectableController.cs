@@ -5,8 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
-public class CollectableController
+public class CollectableController : ICollectableControl
 {
+	public event Action <GameObject> onPickedUpEvent;
+
 	public CollectableController(Transform collectableContainer, CharacterController character)
 	{
 		Collectable[] collectables = collectableContainer.GetComponentsInChildren<Collectable>();
@@ -16,8 +18,8 @@ public class CollectableController
 		}
 	}
 
-	public void OnPickedUp(Collectable collectable)
+	public void OnPickedUp(GameObject gameObject)
 	{
-		GameObject.Destroy(collectable.gameObject);
+		onPickedUpEvent.Invoke(gameObject);
 	}
 }

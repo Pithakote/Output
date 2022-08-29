@@ -5,7 +5,6 @@ using UnityEngine;
 public class StarCollectable : Collectable
 {
 	[SerializeField] private Collider starCollider;
-	private CollectableController collectableController;
 
 	private Animator animator;
 
@@ -19,9 +18,8 @@ public class StarCollectable : Collectable
 		}
 	}
 
-	public override void OnPickedUp(CollectableController collectableController)
+	public override void OnPickedUp()
 	{
-		this.collectableController = collectableController;
 	 	StarController starController = FindObjectOfType<StarController>();
 
 		starController.PickupStar();
@@ -31,6 +29,6 @@ public class StarCollectable : Collectable
 
 	public void OnAnimationComplete()
 	{
-		collectableController.OnPickedUp(this);
+		collectableController.OnPickedUp(this.gameObject);
 	}
 }

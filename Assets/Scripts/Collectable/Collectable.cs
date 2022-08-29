@@ -7,14 +7,38 @@ using UnityEngine;
 
 public abstract class Collectable : MonoBehaviour
 {
-	private CollectableController collectableController;
-	public void Setup(CollectableController collectableController)
+	protected ICollectableControl collectableController;
+
+	public void Setup(ICollectableControl collectableController)
 	{
 		this.collectableController = collectableController;
+		this.collectableController.onPickedUpEvent += DestroyObject;
 	}
-	public abstract void OnPickedUp(CollectableController collectableController);
+
+	public abstract void OnPickedUp();
 	private void OnTriggerEnter(Collider other)
 	{
-		OnPickedUp(collectableController);
+		OnPickedUp();
 	}
+
+	private void DestroyObject(GameObject gameObject)
+	{
+		if (gameObject != this.gameObject)
+		{
+			return;
+		}
+
+		GameObject.Destroy(gameObject);
+	}
+
+	private void OnDisable()
+	{
+		this.collectableController.onPickedUpEvent -= DestroyObject;
+	}
+
+	private void OnDestroy()
+	{
+		this.collectableController.onPickedUpEvent -= DestroyObject;
+	}
+
 }

@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class SpearHazardCollectable : Collectable
 {
-	public override void OnPickedUp(CollectableController collectableController)
+	public override void OnPickedUp()
 	{
 		CharacterController character = FindObjectOfType<CharacterController>();
 		character.TakeDamage();
-		collectableController.OnPickedUp(this);
+		this.collectableController.OnPickedUp(this.gameObject);
 	}
 }
