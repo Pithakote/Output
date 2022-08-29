@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InventoryController 
+public class InventoryController : CollectableController
 {
-    public InventoryController()
+    public InventoryController(Transform collectableContainer, Inventory inventory) :base(collectableContainer)
     { 
-    
+        
     }
 }
