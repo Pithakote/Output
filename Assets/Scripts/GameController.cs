@@ -6,7 +6,7 @@ public class GameController : MonoBehaviour
 {
 	[Header("UI Controller Referenced")]
 	[SerializeField] private Transform UIControllerObject;
-	 
+	[SerializeField] GameObject InventoryUI;
 
 	public CharacterController characterController;
 	public bool hardMode;
@@ -28,8 +28,9 @@ public class GameController : MonoBehaviour
 		cameraController = new CameraController(transform.Find("Camera").GetComponent<Camera>(), characterController);
 		collectableController = new CollectableController(transform.Find("Collectables"), InventoryObject);
 		StarController starController = GetComponent<StarController>();
+		InventoryController = new InventoryController(InventoryUI, InventoryObject);
 		UIController = new UIController(UIControllerObject, characterController, starController);
-		InventoryController = GetComponent<InventoryController>();
+		
 	}
 
 	void Start()
@@ -44,10 +45,21 @@ public class GameController : MonoBehaviour
 	private void Update()
 	{
 		UIController.Update();
+		InventoryController.Update();
 	}
 
 	private void LateUpdate()
 	{
 		cameraController.LateUpdate();
+	}
+
+	private void OnEnable()
+	{
+		InventoryController.OnEnable();
+	}
+
+	private void OnDisable()
+	{
+		InventoryController.OnDisable();
 	}
 }

@@ -24,11 +24,10 @@ public class Inventory
     
     //public Dictionary<string, InventoryStoredItem> InventoryItems { get { return inventoryItems; } }
 
-        public Inventory()
-        {
-
-            inventoryItems = new Dictionary<string, InventoryStoredItem>();
-        }
+    public Inventory()
+    {
+        inventoryItems = new Dictionary<string, InventoryStoredItem>();
+    }
  
 
     public void AddToDictionary(InventoryCollectable inventoryItem)

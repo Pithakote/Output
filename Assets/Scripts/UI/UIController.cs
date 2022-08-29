@@ -15,10 +15,12 @@ public class UIController
 	private Image healthSlider;
 	private TextMeshProUGUI healthText;
 	private TextMeshProUGUI starText;
-
+	private InventoryController inventoryController;
 	public UIController(Transform UIRoot, CharacterController characterController,
 		StarController starController)
 	{
+		
+
 		this.characterController = characterController;
 		this.starController = starController;
 

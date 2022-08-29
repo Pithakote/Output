@@ -3,26 +3,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InventoryController  : MonoBehaviour
+public class InventoryController  
 {
+    Inventory inventory;
+
     public delegate void InventoryToggle();
     public event InventoryToggle inventoryToggleEvent;
 
-    [SerializeField] GameObject InventoryUI;
+    
     public bool InventoryOpen { get; private set; }
 
     public event Action<GameObject> onPickedUpEvent;
+
+
+    GameObject inventoryUI;
+    
+    public InventoryController(GameObject inventoryUI, Inventory inventory)
+    {
+        this.inventory = inventory;
+        this.inventoryUI = inventoryUI;
+    }
 
     private void Awake()
     {
         InventoryOpen = false;
     }
-    private void OnEnable()
+    public void OnEnable()
     {
         inventoryToggleEvent += OpenCloseInventory;
     }
 
-    private void OnDisable()
+    public void Setup(Inventory inventory)
+    {
+        this.inventory = inventory;
+    }
+    public void OnDisable()
     {
         inventoryToggleEvent -= OpenCloseInventory;
     }
@@ -31,7 +46,7 @@ public class InventoryController  : MonoBehaviour
         throw new NotImplementedException();
     }
 
-    private void Update()
+    public void Update()
     {
         if (Input.GetKeyDown(KeyCode.I))
         {
@@ -49,14 +64,14 @@ public class InventoryController  : MonoBehaviour
             case true:
                 {
                     //close inventory
-                    InventoryUI.SetActive(false);
+                    inventoryUI.SetActive(false);
                     InventoryOpen = false;
                     break;
                 }
             case false:
                 {
                     //open inventory
-                    InventoryUI.SetActive(true);
+                    inventoryUI.SetActive(true);
                     InventoryOpen = true;
                     break;
                 }
