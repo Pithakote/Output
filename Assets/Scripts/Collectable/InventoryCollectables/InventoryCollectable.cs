@@ -62,9 +62,9 @@ public class InventoryCollectable : Collectable
             meshRendererComponent = GetComponentInChildren<MeshRenderer>();
         }        
 
-        if (meshRendererComponent.material = null)
+        if (meshRendererComponent.materials[0] = null)
         {
-            meshRendererComponent.material = MaterialOfItem;
+            meshRendererComponent.materials[0] = MaterialOfItem;
         }
 
         if (collider == null)
