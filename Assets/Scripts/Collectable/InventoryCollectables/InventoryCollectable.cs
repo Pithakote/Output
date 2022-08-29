@@ -15,7 +15,7 @@ public class InventoryCollectable : Collectable
     public Mesh MeshOfItem { get; private set; }
     public Material MaterialOfItem { get; private set; }
 
-  
+    public CollectableInventoryItemsSO ItemDescription { get { return itemDescription; } }
     public override void OnPickedUp()
     {
         //add to inventory
