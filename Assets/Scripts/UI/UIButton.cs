@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 [RequireComponent(typeof(Button))]
-public class UIButton : MonoBehaviour
+public abstract class UIButton : MonoBehaviour
 {
     protected GameController gameControllerInstance = default;
 
@@ -28,8 +28,5 @@ public class UIButton : MonoBehaviour
         uiButton.onClick.RemoveListener(onButtonClick);
     }
 
-    void onButtonClick()
-    {
-        gameControllerInstance.InventoryController.InventoryToggleFunc();
-    }
+    protected abstract void onButtonClick();
 }
