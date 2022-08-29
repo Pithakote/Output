@@ -9,8 +9,10 @@ public class UIInventoryItemCell : MonoBehaviour
     [SerializeField] Image inventoryItemImage;
     [SerializeField] TMP_Text inventoryItemName;
     [SerializeField] TMP_Text inventoryItemCounter;
+    [SerializeField] UIInventoryItemButton inventoryItemButton;
 
     public Image InventoryItemImage { get { return inventoryItemImage; } }
     public TMP_Text InventoryItemName { get { return inventoryItemName; } }
     public TMP_Text InventoryItemCounter { get { return inventoryItemCounter; } }
+    public UIInventoryItemButton InventoryItemButton { get { return inventoryItemButton; } }
 }

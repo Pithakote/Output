@@ -56,7 +56,7 @@ public class GameController : MonoBehaviour
 
 		inventoryItemsCell = InventoryItemCell.GetComponent<UIInventoryItemCell>();
 		inventoryDisplayPanel = new InventoryDisplayPanel(inventoryDisplayImage, inventoryItemNameText, inventoryItemDescriptionText);
-		InventoryObject = new Inventory(inventoryDisplayPanel, inventoryItemsCell, inventoryDisplayContent);
+		InventoryObject = new Inventory(inventoryDisplayPanel, inventoryItemsCell, inventoryDisplayContent, this);
 
 		InventoryController = new InventoryController(InventoryUI, InventoryObject);
 		

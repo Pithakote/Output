@@ -22,9 +22,9 @@ public class InventoryItemsDisplayCell
 }
 public class InventoryDisplayPanel
 {
-    public Image inventoryDisplayImage { get; private set; }
-    public TMP_Text inventoryItemNameText { get; private set; }
-    public TMP_Text inventoryItemDescriptionText { get; private set; }
+    public Image inventoryDisplayImage { get; set; }
+    public TMP_Text inventoryItemNameText { get; set; }
+    public TMP_Text inventoryItemDescriptionText { get; set; }
 
     public InventoryDisplayPanel(Image displayImage,
                                 TMP_Text displayName,
@@ -34,9 +34,16 @@ public class InventoryDisplayPanel
         inventoryItemNameText = displayName;
         inventoryItemDescriptionText = displayDescription;
     }
+
+    public void SetDisplayProperties(Sprite imageSprite, string nameOfItem, string descriptionOfItem)
+    {
+        inventoryDisplayImage.sprite = imageSprite;
+        inventoryItemNameText.text = nameOfItem;
+        inventoryItemDescriptionText.text = descriptionOfItem;
+    }
 }
 
-class InventoryStoredItem
+public class InventoryStoredItem
 {
     public InventoryCollectable InventoryItem;
     public int NumberOfItems;
@@ -55,26 +62,28 @@ public class Inventory
     InventoryDisplayPanel inventoryDisplayPanel;
     UIInventoryItemCell uiIntentoryCell;
     Transform inventoryDisplayContent;
+    MonoBehaviour monoBehaviour;
     public event Action<GameObject> onPickedUpEvent;
     
     //public Dictionary<string, InventoryStoredItem> InventoryItems { get { return inventoryItems; } }
 
     public Inventory(InventoryDisplayPanel inventoryDisplayPanel,
                         UIInventoryItemCell uiIntentoryCell,
-                        Transform inventoryDisplayContent)
+                        Transform inventoryDisplayContent,
+                        MonoBehaviour monoBehaviour)
     {
         inventoryItems = new Dictionary<string, InventoryStoredItem>();
         this.inventoryDisplayPanel = inventoryDisplayPanel;
         this.uiIntentoryCell = uiIntentoryCell;
         this.inventoryDisplayContent = inventoryDisplayContent;
+        this.monoBehaviour = monoBehaviour;
     }
  
 
     public void AddToDictionary(InventoryCollectable inventoryItem)
     {
-        //inventoryStoredItem = new InventoryStoredItem(inventoryItem);
-
-       if (inventoryItems.ContainsKey(inventoryItem.NameOfItem))
+        //inventoryStoredItem = new InventoryStoredItem(inventoryItem)
+     if (inventoryItems.ContainsKey(inventoryItem.NameOfItem))
         {
             inventoryItems[inventoryItem.NameOfItem].NumberOfItems++;
 
@@ -88,9 +97,24 @@ public class Inventory
             uiIntentoryCell.InventoryItemName.text = inventoryItem.NameOfItem;
             uiIntentoryCell.InventoryItemCounter.text = inventoryItems[inventoryItem.NameOfItem].NumberOfItems.ToString();
 
-            GameObject.Instantiate(uiIntentoryCell.gameObject,Vector3.zero, Quaternion.identity,inventoryDisplayContent);
-           
+
+
+
+            this.monoBehaviour.StartCoroutine(WaitForInstantiation(inventoryItem));
+
+
+
         }
+    }
+
+    IEnumerator WaitForInstantiation(InventoryCollectable inventoryItem)
+    {
+        GameObject inventoryCell = GameObject.Instantiate(uiIntentoryCell.gameObject, Vector3.zero, Quaternion.identity, inventoryDisplayContent);
+
+        yield return new WaitUntil(() => inventoryCell.activeInHierarchy);
+
+        inventoryCell.GetComponent<UIInventoryItemCell>().InventoryItemButton.Setup(inventoryDisplayPanel, inventoryItems[inventoryItem.NameOfItem]);
+
     }
 
     public int GetNumberOfItems()

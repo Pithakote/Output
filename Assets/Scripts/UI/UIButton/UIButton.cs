@@ -8,7 +8,7 @@ public abstract class UIButton : MonoBehaviour
     protected GameController gameControllerInstance = default;
 
     protected Button uiButton;
-    private void Awake()
+    protected virtual void Awake()
     {
         uiButton = GetComponent<Button>();
     }
