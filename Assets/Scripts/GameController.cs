@@ -23,6 +23,7 @@ public class GameController : MonoBehaviour
 	[SerializeField] Image inventoryDisplayImage;
 	[SerializeField] TMP_Text inventoryItemNameText;
 	[SerializeField] TMP_Text inventoryItemDescriptionText;
+	[SerializeField] TMP_Text inventoryCounter;
 
 	[Space(1)]
 	[Header("Inventory Item Cells")]	
@@ -56,13 +57,13 @@ public class GameController : MonoBehaviour
 
 		inventoryItemsCell = InventoryItemCell.GetComponent<UIInventoryItemCell>();
 		inventoryDisplayPanel = new InventoryDisplayPanel(inventoryDisplayImage, inventoryItemNameText, inventoryItemDescriptionText);
-		InventoryObject = new Inventory(inventoryDisplayPanel, inventoryItemsCell, inventoryDisplayContent, this);
+		InventoryObject = new Inventory(this);
 
-		InventoryController = new InventoryController(InventoryUI, InventoryObject);
+		InventoryController = new InventoryController(InventoryUI, InventoryObject, inventoryDisplayPanel, inventoryItemsCell, inventoryCounter, inventoryDisplayContent);
 		
 
 		cameraController = new CameraController(transform.Find("Camera").GetComponent<Camera>(), characterController);
-		collectableController = new CollectableController(transform.Find("Collectables"), InventoryObject);
+		collectableController = new CollectableController(transform.Find("Collectables"));
 		StarController starController = GetComponent<StarController>();
 		UIController = new UIController(UIControllerObject, characterController, starController);
 

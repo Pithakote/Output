@@ -8,7 +8,11 @@ public class InventoryCollectable : Collectable
     [SerializeField] MeshFilter meshFilterComponent = default;
     [SerializeField] MeshRenderer meshRendererComponent = default;
     [SerializeField] CollectableInventoryItemsSO itemDescription = default;
-    
+
+    InventoryDisplayPanel inventoryDisplayPanel;
+    UIInventoryItemCell uiIntentoryCell;
+    Transform inventoryDisplayContent;
+
     public string NameOfItem { get; private set; }
     public string DescriptionOfItem { get; private set; }
     public Sprite ImageOfItem { get; private set; }
@@ -29,12 +33,12 @@ public class InventoryCollectable : Collectable
             return;
         }
 
-        if (!collectableController.Inventory.CanBeAdded())
+        if (!GameController.Instance.InventoryController.CanItemsBeAdded())
         {
             return;
         }
 
-        collectableController.Inventory.AddToDictionary(this);
+        GameController.Instance.InventoryController.AddToDictionary(this);
         
         Destroy(this.gameObject);
 
