@@ -9,8 +9,11 @@ public class InventoryController  : IInventory
 
     public delegate void InventoryToggle();
     public event InventoryToggle inventoryToggleEvent;
-    public event Action onAddedToInventory;
 
+    public event Action onAddedToInventory;
+    public event Action<InventoryCollectable> onItemSelected;
+
+    InventoryCollectable selectedItem;
     InventoryDisplayPanel inventoryDisplayPanel;
     UIInventoryItemCell uiIntentoryCell;
     Transform inventoryDisplayContent;
@@ -129,8 +132,9 @@ public class InventoryController  : IInventory
 
             uiIntentoryCell.InventoryItemCounter.text = this.inventory.InventoryItems[inventoryItem.NameOfItem].NumberOfItems.ToString();
 
-            inventoryCell.GetComponent<UIInventoryItemCell>().InventoryItemButton.Setup(inventoryDisplayPanel, this.inventory.InventoryItems[inventoryItem.NameOfItem]);
-            inventoryCell.GetComponent<UIInventoryItemCell>().InventoryItemButton.SetupImages();
+            inventoryCell.GetComponent<UIInventoryItemCell>().InventoryItemButton.Setup(inventoryDisplayPanel, this.inventory.InventoryItems[inventoryItem.NameOfItem], this);
+
+            onItemSelected.Invoke(selectedItem);
         }
 
         onAddedToInventory.Invoke();

@@ -14,4 +14,5 @@ public interface ICollectableControl
 public interface IInventory
 {
     event Action onAddedToInventory;
+    event Action<InventoryCollectable> onItemSelected;
 }
